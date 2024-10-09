@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Penjumlahan</h2>
+        <form id="sumForm">
+            <label for="firstNumber">Bilangan pertama</label>
+            <input type="number" id="firstNumber" placeholder="Masukkan angka pertama" required>
+
+            <label for="secondNumber">Bilangan kedua</label>
+            <input type="number" id="secondNumber" placeholder="Masukkan angka kedua" required>
+
+            <div class="button-group">
+                <button type="button" onclick="calculateSum()" class="btn-primary">Jumlahkan</button>
+                <button type="reset" class="btn-secondary">Reset</button>
+            </div>
+        </form>
+        <h3>Hasil: <span id="result">0</span></h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

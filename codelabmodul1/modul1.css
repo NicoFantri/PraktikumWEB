@@ -1,0 +1,30 @@
+/* Styling the table */
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 9px solid rgb(255, 255, 255);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Styling the table rows */
+tr:nth-child(1) td {
+    background-color: lightblue;
+}
+
+tr:nth-child(2) td {
+    background-color: rgb(8, 116, 224);
+    color: white;
+}
+
+tr:nth-child(3) td {
+    background-color: pink;
+}

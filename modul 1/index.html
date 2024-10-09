@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konflix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+        
+        <!-- Sidebar  -->
+<div class="bg-black text-white w-64 min-h-screen p-4">
+    <div class="flex items-center mb-8">
+        <span class="text-red-500 text-3xl font-bold">Konflix</span>
+        <img 
+            src="img/pngtree-movie-board-icon-image_1455346.jpg"
+            alt="Konflix logo" class="ml-2 rounded-full" width="35" height="35"
+        />
+    </div>
+    <ul class="space-y-4">
+        <li class="flex items-center hover:bg-gray-800 p-3 rounded-lg transition duration-300 cursor-pointer">
+            <i class="fas fa-home mr-3"></i>
+            <span>Home</span>
+        </li>
+        <li class="flex items-center hover:bg-gray-800 p-3 rounded-lg transition duration-300 cursor-pointer">
+            <i class="fas fa-fire mr-3"></i>
+            <span>New &amp; Popular</span>
+        </li>
+        <li class="flex items-center bg-gray-800 p-3 rounded-lg transition duration-300 cursor-pointer">
+            <i class="fas fa-film mr-3"></i>
+            <a href="movies.html">Movies</a> <!-- Tambahkan href ke halaman Movies -->
+        </li>
+        <li class="flex items-center hover:bg-gray-800 p-3 rounded-lg transition duration-300 cursor-pointer">
+            <i class="fas fa-th-large mr-3"></i>
+            <span>Categories</span>
+        </li>
+        <li class="flex items-center hover:bg-gray-800 p-3 rounded-lg transition duration-300 cursor-pointer">
+            <i class="fas fa-plus mr-3"></i>
+            <span>My List</span>
+        </li>
+    </ul>
+</div>
+
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-4 bg-gray-200 shadow-md">
+                <div class="flex items-center bg-gray-300 p-2 rounded-full w-72 focus-within:ring-2 focus-within:ring-red-500 transition-all duration-300">
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        class="bg-transparent focus:outline-none w-full"
+                    />
+                    <i class="fas fa-search text-gray-500"></i>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-gray-300 text-black px-5 py-2 rounded-full hover:bg-gray-400 transition duration-300">
+                        Login
+                    </button>
+                    <button class="bg-red-500 text-white px-5 py-2 rounded-full hover:bg-red-600 transition duration-300 shadow-lg">
+                        Daftar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carousel -->
+            <div class="carousel relative h-96 flex items-center justify-center shadow-md bg-gray-800 rounded-lg overflow-hidden">
+                <button id="prevBtn" class="absolute left-4 text-white text-2xl hover:text-gray-400 transition duration-300 z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            
+                <!-- Gambar carousel -->
+                <img id="carouselImage" src="img/vigilante.jpg" alt="Featured Movie" class="object-cover h-full w-full"/>
+            
+                <button id="nextBtn" class="absolute right-4 text-white text-2xl hover:text-gray-400 transition duration-300 z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+           
+
+            <!-- New & Popular Section -->
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-4">New & Popular</h2>
+            <!-- Thumbnails -->
+            <div class="p-6 grid grid-cols-4 gap-6">
+                <!-- Thumbnail 1 -->
+                <div class="thumbnail relative group bg-gray-300 h-64 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="img/30adbd92-9d51-4299-8eee-79e5766e2d6d.jpeg" alt="Movie Thumbnail" class="object-cover h-full w-full transition-transform transform group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                        <span class="text-white text-xl font-bold">vincenzo</span>
+                    </div>
+                </div>
+                <!-- Thumbnail 2 -->
+                <div class="thumbnail relative group bg-gray-300 h-64 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="img/images (1).jpeg" alt="Movie Thumbnail" class="object-cover h-full w-full transition-transform transform group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                        <span class="text-white text-xl font-bold">vigilante</span>
+                    </div>
+                </div>
+                <!-- Thumbnail 3 -->
+                <div class="thumbnail relative group bg-gray-300 h-64 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="img/xO9M3q.jpg" alt="Movie Thumbnail" class="object-cover h-full w-full transition-transform transform group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                        <span class="text-white text-xl font-bold">mouse</span>
+                    </div>
+                </div>
+                <!-- Thumbnail 4 -->
+                <div class="thumbnail relative group bg-gray-300 h-64 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="img/unnamed.png" alt="Movie Thumbnail" class="object-cover h-full w-full transition-transform transform group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                        <span class="text-white text-xl font-bold">Spiderman</span>
+                    </div>
+                </div>
+                <!-- Tambahan Thumbnail -->
+                <div class="thumbnail relative group bg-gray-300 h-64 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="img/catur.jpg" alt="Movie Thumbnail" class="object-cover h-full w-full transition-transform transform group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                        <span class="text-white text-xl font-bold">catur</span>
+                    </div>
+                </div>
+                <div class="thumbnail relative group bg-gray-300 h-64 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="img/deadpol.jpg" alt="Movie Thumbnail" class="object-cover h-full w-full transition-transform transform group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                        <span class="text-white text-xl font-bold">deadpol</span>
+                    </div>
+                </div>
+                <div class="thumbnail relative group bg-gray-300 h-64 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="img/wibu.jpg" alt="Movie Thumbnail" class="object-cover h-full w-full transition-transform transform group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                        <span class="text-white text-xl font-bold">class of elit</span>
+                    </div>
+                </div>
+                <div class="thumbnail relative group bg-gray-300 h-64 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="img/Summer_Ghost-cover.jpg" alt="Movie Thumbnail" class="object-cover h-full w-full transition-transform transform group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                        <span class="text-white text-xl font-bold">Summer Ghost</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        let images = [
+            'img/vigilante.jpg', 
+            'img/vincenzo.jpeg', 
+            'img/wp10164988.jpg', 
+        ];
+
+        let currentIndex = 0;
+        const carouselImage = document.getElementById('carouselImage');
+        
+        // Function to change image
+        function updateCarousel() {
+            currentIndex = (currentIndex + 1) % images.length;
+            carouselImage.src = images[currentIndex];
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(updateCarousel, 5000);
+
+        // Manual slide
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    </script>
+</body>
+</html>
