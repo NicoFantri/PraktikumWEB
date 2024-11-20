@@ -1,0 +1,260 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 80px;
+  background-color: #fff;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar img {
+  width: 40px;
+  margin-bottom: 20px;
+}
+
+.sidebar i {
+  font-size: 24px;
+  color: #ff6600;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 14px;
+  color: #888;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  flex: 1;
+}
+
+.search-bar i {
+  color: #888;
+  margin-left: 10px;
+}
+
+.categories {
+  display: flex;
+  margin: 20px 0;
+}
+
+.category {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category.active, .category:hover {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #888;
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff6600;
+  margin: 10px 0;
+}
+
+.product-card .cart-icon {
+  color: #ff6600;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.order-summary {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+}
+
+.order-summary h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order-item img {
+  width: 50px;
+  border-radius: 8px;
+}
+
+.order-item .details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.order-item .details h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.order-item .details .price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff6600;
+}
+
+.order-item .quantity {
+  display: flex;
+  align-items: center;
+}
+
+.order-item .quantity i {
+  font-size: 16px;
+  color: #ff6600;
+  cursor: pointer;
+}
+
+.order-item .quantity span {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.totals .total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.continue-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.continue-btn:hover {
+  background-color: #e65c00;
+}
+
+
+/* Tombol Save Order */
+button {
+  background-color: #4CAF50; /* Warna hijau */
+  color: white; /* Warna teks */
+  padding: 10px 20px; /* Ruang dalam */
+  margin: 10px 0; /* Margin atas dan bawah */
+  border: none; /* Hapus border */
+  border-radius: 5px; /* Sudut membulat */
+  cursor: pointer; /* Ganti kursor menjadi pointer */
+  font-size: 16px; /* Ukuran font */
+  font-weight: bold; /* Tebal font */
+  transition: background-color 0.3s ease; /* Animasi efek hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Warna saat dihover */
+}
+
+button:active {
+  background-color: #3e8e41; /* Warna saat tombol ditekan */
+  transform: scale(0.98); /* Efek menekan */
+}
+
+button:disabled {
+  background-color: #cccccc; /* Warna abu-abu jika tombol dinonaktifkan */
+  cursor: not-allowed; /* Ganti kursor saat tombol dinonaktifkan */
+}

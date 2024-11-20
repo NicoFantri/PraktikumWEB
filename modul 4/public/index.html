@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="https://storage.googleapis.com/a1aa/image/24hfxKt3Qy2EOihWv8p7u0YfkS2AIDqR4Pk3g61dikivmVwTA.jpg" alt="Logo" width="40" height="40">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-th-large"></i>
+            <i class="fas fa-clock"></i>
+            <i class="fas fa-bookmark"></i>
+            <i class="fas fa-lock"></i>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <div>
+                    <h1>Welcome, Gorry</h1>
+                    <p>Discover whatever you need easily</p>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search product...">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-filter"></i>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="category">Signature</div>
+                <div class="category active">Croissant</div>
+                <div class="category">Waffle</div>
+                <div class="category">Coffee</div>
+                <div class="category">Ice Cream</div>
+            </div>
+            <div class="products" id="products">
+                <!-- Product Cards akan ditambahkan melalui JavaScript -->
+            </div>
+        </div>
+        <div class="order-summary" id="order-summary">
+            <h2>Current Order</h2>
+            <div class="totals">
+                <div class="total"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+                <div class="total"><span>Discount</span><span id="discount">-$0.00</span></div>
+                <div class="total"><span>Total Sales Tax</span><span id="tax">$0.00</span></div>
+                <div class="total"><span>Total</span><span id="total">$0.00</span></div>
+            </div>
+            <div class="continue-btn">Continue to Payment</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
